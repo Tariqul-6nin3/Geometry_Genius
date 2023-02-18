@@ -18,6 +18,9 @@
   font-size: 20px;
   color: rgba(17, 17, 17, 0.6);
 }
+.single-card {
+  border: 1px solid gray;
+}
 .header-button {
   font-weight: 700;
   font-size: 15px;
@@ -30,4 +33,12 @@
 }
 .claculate-btn {
   background-color: #1090d8;
+}
+.area-calculation {
+  border: 1px solid gray;
+}
+.object-photo {
+  height: 185px;
+}
+.object-photo img {
 }

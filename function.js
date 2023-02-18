@@ -1,7 +1,10 @@
 document.getElementById("blog-btn").addEventListener("click", function () {
-  //   console.log("btnclicked");
   window.location.href = "./blog.html";
 });
+
+/* -------------
+Triangle Calculation
+  ---------------- */
 document
   .getElementById("calculate-btn-1")
   .addEventListener("click", function () {
@@ -10,9 +13,56 @@ document
     const nameOfObject = innerTextValue("triangle");
     const areaOfTriangle =
       0.5 * parseFloat(lengthValue) * parseFloat(heightValue);
-    const showdata = displayData(nameOfObject, areaOfTriangle);
-    console.log(showdata);
+    if (
+      isNaN(parseFloat(lengthValue), isNaN(parseFloat(heightValue))) === true
+    ) {
+      alert(
+        "Please enter a number.Value of length & height always should be a number"
+      );
+    } else if ((parseFloat(lengthValue), parseFloat(heightValue) <= 0)) {
+      alert(
+        "Value of length & height must be more than Zero otherwise it can't be a triangle"
+      );
+    } else {
+      const showdata = displayData(nameOfObject, areaOfTriangle);
+    }
   });
+
+/* ---------------------
+     Rectangle Calculation
+  ----------------------- */
+document
+  .getElementById("calculate-btn-2")
+  .addEventListener("click", function () {
+    const widthValueRectangle = innerTextValue("width-field-rect", true);
+    const lengthValueRectangle = innerTextValue("length-field-rect", true);
+    const nameOfObject = innerTextValue("rectangle");
+    const areaOfrectangle =
+      parseFloat(lengthValueRectangle) * parseFloat(widthValueRectangle);
+    // console.log(areaOfrectangle);
+    if (
+      isNaN(
+        parseFloat(widthValueRectangle),
+        isNaN(parseFloat(lengthValueRectangle))
+      ) === true
+    ) {
+      alert(
+        "Please enter a number.Value of length & height always should be a number"
+      );
+    } else if (
+      (parseFloat(widthValueRectangle), parseFloat(lengthValueRectangle) <= 0)
+    ) {
+      alert(
+        "Value of length & height must be more than Zero otherwise it can't be a triangle"
+      );
+    } else {
+      const showdata = displayData(nameOfObject, areaOfrectangle);
+    }
+  });
+
+/* ---------------------
+    Paralle Calculation
+  ----------------------- */
 
 // some common utility :
 function innerTextValue(idName, isInput) {
