@@ -66,31 +66,26 @@ document
     Paralle Calculation
   ----------------------- */
 document
-  .getElementById("calculate-btn-2")
+  .getElementById("calculte-btn-3")
   .addEventListener("click", function () {
-    const widthValueRectangle = innerTextValue("width-field-rect", true);
-    const lengthValueRectangle = innerTextValue("length-field-rect", true);
-    const nameOfObject = innerTextValue("rectangle");
-    const areaOfrectangle =
-      parseFloat(lengthValueRectangle) * parseFloat(widthValueRectangle);
-    // console.log(areaOfrectangle);
+    const baseValuePara = innerTextValue("base-field-para", true);
+    const heightValuePara = innerTextValue("height-field-para", true);
+    const nameOfObject = innerTextValue("Parallelogram");
+    const areaOfPara = parseFloat(baseValuePara) * parseFloat(heightValuePara);
+    console.log(areaOfPara);
     if (
-      isNaN(
-        parseFloat(widthValueRectangle),
-        isNaN(parseFloat(lengthValueRectangle))
-      ) === true
+      isNaN(parseFloat(baseValuePara), isNaN(parseFloat(heightValuePara))) ===
+      true
     ) {
       alert(
         "Please enter a number.Value of length & height always should be a number"
       );
-    } else if (
-      (parseFloat(widthValueRectangle), parseFloat(lengthValueRectangle) <= 0)
-    ) {
+    } else if ((parseFloat(baseValuePara), parseFloat(heightValuePara) <= 0)) {
       alert(
         "Value of length & height must be more than Zero otherwise it can't be a triangle"
       );
     } else {
-      const showdata = displayData(nameOfObject, areaOfrectangle);
+      const showdata = displayData(nameOfObject, areaOfPara);
     }
   });
 
@@ -106,7 +101,7 @@ function innerTextValue(idName, isInput) {
     return textFieldValue;
   }
 }
-function displayData(nameOfObject, areaOfTriangle) {
+function displayData(nameOfObject, areaOfTriangle, areaOfPara) {
   const container = document.getElementById("table-container");
   const tr = document.createElement("tr");
   tr.innerHTML = `
@@ -122,22 +117,22 @@ function displayData(nameOfObject, areaOfTriangle) {
   container.appendChild(tr);
 }
 
-const card = document.querySelectorAll(".single-card");
+// const card = document.querySelectorAll(".single-card");
 
-// Define an array of random colors
-const colors = [
-  "#1abc9c",
-  "#2980b9",
-  "#f368e0",
-  "#222f3e",
-  "#10ac84",
-  "#cf6a87",
-];
+// // Define an array of random colors
+// const colors = [
+//   "#1abc9c",
+//   "#2980b9",
+//   "#f368e0",
+//   "#222f3e",
+//   "#10ac84",
+//   "#cf6a87",
+// ];
 
-// Add a mouseover event listener to the card
-card.addEventListener("mouseover", function () {
-  // Get a random color from the colors array
-  const randomColor = colors[Math.floor(Math.random() * colors.length)];
-  // Set the background color of the card to the random color
-  card.style.backgroundColor = randomColor;
-});
+// // Add a mouseover event listener to the card
+// card.addEventListener("mouseover", function () {
+//   // Get a random color from the colors array
+//   const randomColor = colors[Math.floor(Math.random() * colors.length)];
+//   // Set the background color of the card to the random color
+//   card.style.backgroundColor = randomColor;
+// });
