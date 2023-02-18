@@ -94,26 +94,30 @@ document
   ---------------------------- */
 
 document
-  .getElementById("calculte-btn-3")
+  .getElementById("calculte-btn-4")
   .addEventListener("click", function () {
-    const baseValuePara = innerTextValue("base-field-para", true);
-    const heightValuePara = innerTextValue("height-field-para", true);
-    const nameOfObject = innerTextValue("Parallelogram");
-    const areaOfPara = parseFloat(baseValuePara) * parseFloat(heightValuePara);
-    console.log(areaOfPara);
+    const rhombosDiagonal1 = innerTextValue("diagonal1", true);
+    const rhombosDiagonal2 = innerTextValue("diagonal2", true);
+    const nameOfObject = innerTextValue("rhombus");
+    const areaOfRhombos =
+      0.5 * parseFloat(rhombosDiagonal1) * parseFloat(rhombosDiagonal2);
     if (
-      isNaN(parseFloat(baseValuePara), isNaN(parseFloat(heightValuePara))) ===
-      true
+      isNaN(
+        parseFloat(rhombosDiagonal1),
+        isNaN(parseFloat(rhombosDiagonal2))
+      ) === true
     ) {
       alert(
         "Please enter a number.Value of length & height always should be a number"
       );
-    } else if ((parseFloat(baseValuePara), parseFloat(heightValuePara) <= 0)) {
+    } else if (
+      (parseFloat(rhombosDiagonal1), parseFloat(rhombosDiagonal2) <= 0)
+    ) {
       alert(
         "Value of length & height must be more than Zero.PLz add any Number"
       );
     } else {
-      const showdata = displayData(nameOfObject, areaOfPara);
+      const showdata = displayData(nameOfObject, areaOfRhombos);
     }
   });
 
@@ -137,7 +141,7 @@ function displayData(nameOfObject, areaOfTriangle) {
   tr.innerHTML = `
     <td>${rowCounter}</td>
     <td>${nameOfObject}</td>
-    <td>${areaOfTriangle}</td>
+    <td>${areaOfTriangle.toFixed(2)} cm²</td>
     <td></td>
   `;
   const td = tr.querySelector("td:last-child");
@@ -146,8 +150,18 @@ function displayData(nameOfObject, areaOfTriangle) {
   button.textContent = "Convert to m\u00B2";
   button.style.backgroundColor = "blue";
   button.style.padding = "8px";
+  button.style.color = "white";
   td.appendChild(button);
   container.appendChild(tr);
+
+  button.addEventListener("click", () => {
+    // Divide areaOfTriangle by 100
+    const areaOfTriangleMeters = areaOfTriangle / 100;
+    // Update the content of the corresponding table cell with the new value
+    tr.querySelector(
+      "td:nth-child(3)"
+    ).textContent = `${areaOfTriangleMeters} m²`;
+  });
 
   rowCounter++; // Increment the row counter
 }
