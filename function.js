@@ -14,7 +14,7 @@ document
     const cm = Math.pow("cm", 2);
     console.log(cm);
     const areaOfTriangle =
-      0.5 * parseFloat(lengthValue) * parseFloat(heightValue) + cm;
+      0.5 * parseFloat(lengthValue) * parseFloat(heightValue);
     if (
       isNaN(parseFloat(lengthValue), isNaN(parseFloat(heightValue))) === true
     ) {
@@ -112,27 +112,19 @@ function displayData(nameOfObject, areaOfTriangle, areaOfPara) {
   `;
   const td = tr.querySelector("td:last-child");
   const button = document.createElement("button");
+  button.backgroundColor = "#1090D8";
   button.textContent = "Convert to m\u00B2";
   td.appendChild(button);
   container.appendChild(tr);
 }
 
-// const card = document.querySelectorAll(".single-card");
+const singleCards = document.querySelectorAll(".single-card");
 
-// // Define an array of random colors
-// const colors = [
-//   "#1abc9c",
-//   "#2980b9",
-//   "#f368e0",
-//   "#222f3e",
-//   "#10ac84",
-//   "#cf6a87",
-// ];
-
-// // Add a mouseover event listener to the card
-// card.addEventListener("mouseover", function () {
-//   // Get a random color from the colors array
-//   const randomColor = colors[Math.floor(Math.random() * colors.length)];
-//   // Set the background color of the card to the random color
-//   card.style.backgroundColor = randomColor;
-// });
+singleCards.forEach(card => {
+  card.addEventListener("mouseover", () => {
+    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+      Math.random() * 256
+    )}, ${Math.floor(Math.random() * 256)})`;
+    card.style.backgroundColor = randomColor;
+  });
+});
