@@ -23,7 +23,7 @@ document
       );
     } else if ((parseFloat(lengthValue), parseFloat(heightValue) <= 0)) {
       alert(
-        "Value of length & height must be more than Zero otherwise it can't be a triangle"
+        "Value of length & height must be more than Zero.PLz add any Number"
       );
     } else {
       const showdata = displayData(nameOfObject, areaOfTriangle);
@@ -55,16 +55,16 @@ document
       (parseFloat(widthValueRectangle), parseFloat(lengthValueRectangle) <= 0)
     ) {
       alert(
-        "Value of length & height must be more than Zero otherwise it can't be a triangle"
+        "Value of length & height must be more than Zero.PLz add any Number"
       );
     } else {
       const showdata = displayData(nameOfObject, areaOfrectangle);
     }
   });
 
-/* ---------------------
-    Paralle Calculation
-  ----------------------- */
+/* ---------------------------
+    Parallelogram Calculation
+  ---------------------------- */
 document
   .getElementById("calculte-btn-3")
   .addEventListener("click", function () {
@@ -82,7 +82,35 @@ document
       );
     } else if ((parseFloat(baseValuePara), parseFloat(heightValuePara) <= 0)) {
       alert(
-        "Value of length & height must be more than Zero otherwise it can't be a triangle"
+        "Value of length & height must be more than Zero.PLz add any Number"
+      );
+    } else {
+      const showdata = displayData(nameOfObject, areaOfPara);
+    }
+  });
+
+/* ---------------------------
+         Rhombos Calculation
+  ---------------------------- */
+
+document
+  .getElementById("calculte-btn-3")
+  .addEventListener("click", function () {
+    const baseValuePara = innerTextValue("base-field-para", true);
+    const heightValuePara = innerTextValue("height-field-para", true);
+    const nameOfObject = innerTextValue("Parallelogram");
+    const areaOfPara = parseFloat(baseValuePara) * parseFloat(heightValuePara);
+    console.log(areaOfPara);
+    if (
+      isNaN(parseFloat(baseValuePara), isNaN(parseFloat(heightValuePara))) ===
+      true
+    ) {
+      alert(
+        "Please enter a number.Value of length & height always should be a number"
+      );
+    } else if ((parseFloat(baseValuePara), parseFloat(heightValuePara) <= 0)) {
+      alert(
+        "Value of length & height must be more than Zero.PLz add any Number"
       );
     } else {
       const showdata = displayData(nameOfObject, areaOfPara);
@@ -101,23 +129,32 @@ function innerTextValue(idName, isInput) {
     return textFieldValue;
   }
 }
-function displayData(nameOfObject, areaOfTriangle, areaOfPara) {
+let rowCounter = 1; // Counter variable to keep track of dynamic row numbers
+
+function displayData(nameOfObject, areaOfTriangle) {
   const container = document.getElementById("table-container");
   const tr = document.createElement("tr");
   tr.innerHTML = `
-    <td>${1}</td>
+    <td>${rowCounter}</td>
     <td>${nameOfObject}</td>
     <td>${areaOfTriangle}</td>
     <td></td>
   `;
   const td = tr.querySelector("td:last-child");
   const button = document.createElement("button");
-  button.backgroundColor = "#1090D8";
+
   button.textContent = "Convert to m\u00B2";
+  button.style.backgroundColor = "blue";
+  button.style.padding = "8px";
   td.appendChild(button);
   container.appendChild(tr);
+
+  rowCounter++; // Increment the row counter
 }
 
+/* ----------------------------
+   Random colour fuction here 
+   ----------------------------*/
 const singleCards = document.querySelectorAll(".single-card");
 
 singleCards.forEach(card => {
