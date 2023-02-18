@@ -22,24 +22,24 @@
         <h5 class="second-title">Geometry Genius</h5>
        </div>
        <div>
-        <button class="header-button">Blog</button>
+        <button id="blog-btn" class="header-button">Blog</button>
       </div>
     </div> 
     </header>
     <main class="w-11/12 mx-auto mt-16 text-center md:flex">
-      <div class="card-container w-full md:w-[80%] grid md:grid-cols-3 md:grid-rows-2 gap-4 ">
+      <div class="card-container w-full md:w-[70%] grid md:grid-cols-3 md:grid-rows-2 gap-4 ">
         <div class="single-card shadow-lg py-16 rounded-xl border-gray-400">
           <div class=" ml-12 -mt-4">
             <img src="./images/triangle.png" alt="">
           </div>
           <article class="text-center px-3 py-4">
-            <h4 class="text-xl font-medium mt-3">Triangle</h4>
+            <h4 id="triangle" class="text-xl font-medium mt-3">Triangle</h4>
             <h5 class="text-lg mb-4 mt-3">Area(A)= 0.5 * b * h</h5>
-            <input class="w-20 bg-gray-50 px-2 py-1 rounded" type="number" name="" id="" placeholder="b"> <span class="text-xl ml-2">cm</span>
-            <input class="w-20 bg-gray-50 px-2 py-1 rounded ml-4" type="number" name="" id="" placeholder="h"> <span class="text-xl ml-2">cm</span>
+            <input id="length-field" class="w-20 bg-gray-50 px-2 py-1 rounded" type="number" name="" placeholder="b"> <span class="text-xl ml-2">cm</span>
+            <input class="w-20 bg-gray-50 px-2 py-1 rounded ml-4" type="number" name="" id="height-field" placeholder="h"> <span class="text-xl ml-2">cm</span>
           </article>
           <div>
-            <button class="claculate-btn text-white py-2 mt-6 px-28 text-xl rounded-lg font-semibold ">Calculate</button>
+            <button id="calculate-btn-1" class="claculate-btn text-white py-2 mt-6 px-28 text-xl rounded-lg font-semibold ">Calculate</button>
           </div>
         </div>
         <div class="single-card shadow-lg py-16 rounded-xl">
@@ -113,9 +113,27 @@
           </div>
         </div>
       </div>
-      <div class="md:w-[20%] px-3 py-2">
+      <div class="md:w-[30%] px-3 py-2">
         <h1 class="underline">Area Calculation</h1>
+        <div class="overflow-x-auto mt-4 table-container">
+  <table class="table w-full">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Area</th>
+        <th>Convert</th>
+      </tr>
+    </thead>
+    <tbody id="table-container">
+      <!-- row 1 -->
+      
+    </tbody>
+  </table>
+</div>
       </div>
     </main>
+    <script src="./function.js"></script>
   </body>
 </html>
