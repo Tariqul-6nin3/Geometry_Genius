@@ -11,8 +11,10 @@ document
     const lengthValue = innerTextValue("length-field", true);
     const heightValue = innerTextValue("height-field", true);
     const nameOfObject = innerTextValue("triangle");
+    const cm = Math.pow("cm", 2);
+    console.log(cm);
     const areaOfTriangle =
-      0.5 * parseFloat(lengthValue) * parseFloat(heightValue);
+      0.5 * parseFloat(lengthValue) * parseFloat(heightValue) + cm;
     if (
       isNaN(parseFloat(lengthValue), isNaN(parseFloat(heightValue))) === true
     ) {
@@ -87,3 +89,22 @@ function displayData(nameOfObject, areaOfTriangle) {
        `;
   container.appendChild(tr);
 }
+const card = document.querySelectorAll(".single-card");
+
+// Define an array of random colors
+const colors = [
+  "#1abc9c",
+  "#2980b9",
+  "#f368e0",
+  "#222f3e",
+  "#10ac84",
+  "#cf6a87",
+];
+
+// Add a mouseover event listener to the card
+card.addEventListener("mouseover", function () {
+  // Get a random color from the colors array
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  // Set the background color of the card to the random color
+  card.style.backgroundColor = randomColor;
+});
