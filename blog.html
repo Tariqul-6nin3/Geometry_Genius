@@ -4,145 +4,165 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind link -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Blog</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>QNA Section</title>
   </head>
   <body>
-    <section class="mt-4 w-9/12 mx-auto">
-      <h4 class="text-2xl underline font-bold">Answer of given question:</h4>
-      <div>
-        <h4 class="text-lg font-semibold mt-2">
-          Q.1: What is DOM and what is the purpose of DOM?
-        </h4>
-        <div class="ml-4 bg-sky-50 p-4">
-          <p>
-            <strong>Definiton Of DOM:</strong> The Document Object Model (DOM)
-            is a programming interface that allows web developers to manipulate
-            the content and structure of web pages using scripting languages
-            such as JavaScript. It provides a hierarchical representation of the
-            web page, and developers can use this representation to access and
-            modify the elements of the page dynamically. The DOM is essential
-            for creating interactive and dynamic web pages and is widely used in
-            web development. <br />
-            The DOM provides a set of standard methods and properties that can
-            be used to access, manipulate, and update the content and structure
-            of web pages. For example, with the DOM, developers can add, delete,
-            or modify elements on the page, change the style or content of
-            elements, and respond to user actions like clicks and key presses.
-          </p>
-          <p>
-            <strong>Purposes of DOM: </strong> The main purpose of the Document
-            Object Model (DOM) is to provide a way for web developers to
-            programmatically manipulate the content and structure of web pages.
-            Some common use cases of the DOM include:
+    <!-- Header Stars -->
+    <header class="bg-slate-400 mx-auto mt-6 md:mt-10">
+      <div class="header-container flex justify-between px-8 py-2 rounded-md">
+        <div>
+          <h4 class="main-title">Interactive</h4>
+          <h5 class="second-title">Geometry Genius</h5>
+        </div>
+        <div>
+          <button id="blog-btn" class="header-button">Blog</button>
+        </div>
+      </div>
+    </header>
+    <!-- Header Ended -->
 
-            <li>
-              Accessing and modifying HTML elements: The DOM allows developers
-              to access HTML elements on a web page and modify their properties,
-              such as their content, style, or attributes.
-            </li>
-            <li>
-              Adding or removing HTML elements: Developers can use the DOM to
-              dynamically add or remove HTML elements from a web page, allowing
-              them to create dynamic and interactive content.
-            </li>
-            <li>
-              Responding to user events: The DOM enables developers to respond
-              to user events, such as clicks or key presses, by modifying the
-              content or behavior of the web page.
-            </li>
-            <li>
-              Validating form data: Web forms can be validated using the DOM,
-              allowing developers to ensure that user input is in the correct
-              format and meets specific requirements
-            </li>
-          </p>
+    <main>
+      <section class="mt-4 w-9/12 mx-auto">
+        <h4 class="text-2xl underline font-bold">Answer of given question:</h4>
+        <div>
+          <h4 class="text-lg font-semibold mt-2">
+            Q.1: What is DOM and what is the purpose of DOM?
+          </h4>
+          <div class="ml-4 bg-sky-50 p-4">
+            <p>
+              <strong>Definiton Of DOM:</strong> The Document Object Model (DOM)
+              is a programming interface that allows web developers to
+              manipulate the content and structure of web pages using scripting
+              languages such as JavaScript. It provides a hierarchical
+              representation of the web page, and developers can use this
+              representation to access and modify the elements of the page
+              dynamically. The DOM is essential for creating interactive and
+              dynamic web pages and is widely used in web development. <br />
+              The DOM provides a set of standard methods and properties that can
+              be used to access, manipulate, and update the content and
+              structure of web pages. For example, with the DOM, developers can
+              add, delete, or modify elements on the page, change the style or
+              content of elements, and respond to user actions like clicks and
+              key presses.
+            </p>
+            <p>
+              <strong>Purposes of DOM: </strong> The main purpose of the
+              Document Object Model (DOM) is to provide a way for web developers
+              to programmatically manipulate the content and structure of web
+              pages. Some common use cases of the DOM include:
+
+              <li>
+                Accessing and modifying HTML elements: The DOM allows developers
+                to access HTML elements on a web page and modify their
+                properties, such as their content, style, or attributes.
+              </li>
+              <li>
+                Adding or removing HTML elements: Developers can use the DOM to
+                dynamically add or remove HTML elements from a web page,
+                allowing them to create dynamic and interactive content.
+              </li>
+              <li>
+                Responding to user events: The DOM enables developers to respond
+                to user events, such as clicks or key presses, by modifying the
+                content or behavior of the web page.
+              </li>
+              <li>
+                Validating form data: Web forms can be validated using the DOM,
+                allowing developers to ensure that user input is in the correct
+                format and meets specific requirements
+              </li>
+            </p>
+          </div>
         </div>
-      </div>
-      <div>
-        <h4 class="text-lg font-semibold mt-2">
-          Q.2: How will you select HTML elements using DOM? Name the DOM
-          methods?
-        </h4>
-        <div class="ml-4 bg-yellow-50 p-4">
+        <div>
+          <h4 class="text-lg font-semibold mt-2">
+            Q.2: How will you select HTML elements using DOM? Name the DOM
+            methods?
+          </h4>
+          <div class="ml-4 bg-yellow-50 p-4">
+            <p>
+              To select HTML elements using the Document Object Model (DOM), we
+              can use a variety of methods depending on the specific elements we
+              want to select. <br />
+              Methods of DOM are given below:
+              <li>
+                getElementById(): This method returns the element with the
+                specified ID attribute.
+              </li>
+              <li>
+                getElementsByClassName(): This method returns a collection of
+                elements that have a specific class name.
+              </li>
+              <li>
+                getElementsByTagName(): This method returns a collection of
+                elements that have a specific tag name.
+              </li>
+              <li>
+                querySelector(): This method returns the first element that
+                matches a specified CSS selector
+              </li>
+              <li>
+                querySelectorAll(): This method returns a collection of all
+                elements that match a specified CSS selector.
+              </li>
+            </p>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mt-2">Q.3: What is event bubble?</h4>
+        </div>
+        <div class="ml-4 bg-teal-50 p-4">
           <p>
-            To select HTML elements using the Document Object Model (DOM), we
-            can use a variety of methods depending on the specific elements we
-            want to select. <br />
-            Methods of DOM are given below:
-            <li>
-              getElementById(): This method returns the element with the
-              specified ID attribute.
-            </li>
-            <li>
-              getElementsByClassName(): This method returns a collection of
-              elements that have a specific class name.
-            </li>
-            <li>
-              getElementsByTagName(): This method returns a collection of
-              elements that have a specific tag name.
-            </li>
-            <li>
-              querySelector(): This method returns the first element that
-              matches a specified CSS selector
-            </li>
-            <li>
-              querySelectorAll(): This method returns a collection of all
-              elements that match a specified CSS selector.
-            </li>
+            <strong>Definition of Event Bubble:</strong> Event bubbling is a
+            behavior in which an event that is triggered on a specific HTML
+            element is also propagated to and processed by its parent and
+            ancestor elements in the DOM tree. This means that when an event is
+            triggered, it is first handled by the element where it originated
+            and then passed up the DOM tree until it reaches the root document
+            object. Event bubbling is important in web development because it
+            allows developers to create more modular and reusable code by
+            attaching event listeners to parent elements rather than individual
+            child elements. However, it can also lead to unexpected behavior and
+            performance issues if not managed properly.
           </p>
         </div>
-      </div>
-      <div>
-        <h4 class="text-lg font-semibold mt-2">Q.3: What is event bubble?</h4>
-      </div>
-      <div class="ml-4 bg-teal-50 p-4">
-        <p>
-          <strong>Definition of Event Bubble:</strong> Event bubbling is a
-          behavior in which an event that is triggered on a specific HTML
-          element is also propagated to and processed by its parent and ancestor
-          elements in the DOM tree. This means that when an event is triggered,
-          it is first handled by the element where it originated and then passed
-          up the DOM tree until it reaches the root document object. Event
-          bubbling is important in web development because it allows developers
-          to create more modular and reusable code by attaching event listeners
-          to parent elements rather than individual child elements. However, it
-          can also lead to unexpected behavior and performance issues if not
-          managed properly.
-        </p>
-      </div>
-      <div>
-        <h4 class="text-lg font-semibold mt-2">
-          Q.4: What is a callback function and why will you use it?
-        </h4>
-      </div>
-      <div class="ml-4 bg-slate-100 p-4">
-        <p>
-          <strong>Definition Of Callback function:</strong> A callback function
-          is a type of function in programming that is defined separately from
-          the function in which it is used. The main function can then call the
-          callback function at specific points during its execution, passing it
-          as an argument to achieve a particular task. The callback function is
-          usually used to execute some code after the main function has
-          completed a specific task, or when a certain event occurs. For
-          example, a callback function can be used to handle user input or to
-          perform an action once a long-running operation has completed.
-          Callback functions are a common programming pattern in many languages
-          and frameworks, and they are especially useful in situations where the
-          order of execution is not known ahead of time, or when multiple
-          functions need to be executed in parallel or in sequence.
-        </p>
-        <p>
-          <strong>Reason behind using Callback function:</strong> Callback
-          functions are used to handle situations where a function needs to wait
-          for an operation to complete before it can continue executing. By
-          passing a callback function as an argument to the function, the
-          callback can be called when the operation is complete, allowing the
-          main function to continue executing. Callbacks are also useful for
-          handling user events or input, and are a powerful tool for creating
-          flexible and modular code.
-        </p>
-      </div>
-    </section>
+        <div>
+          <h4 class="text-lg font-semibold mt-2">
+            Q.4: What is a callback function and why will you use it?
+          </h4>
+        </div>
+        <div class="ml-4 bg-slate-100 p-4">
+          <p>
+            <strong>Definition Of Callback function:</strong> A callback
+            function is a type of function in programming that is defined
+            separately from the function in which it is used. The main function
+            can then call the callback function at specific points during its
+            execution, passing it as an argument to achieve a particular task.
+            The callback function is usually used to execute some code after the
+            main function has completed a specific task, or when a certain event
+            occurs. For example, a callback function can be used to handle user
+            input or to perform an action once a long-running operation has
+            completed. Callback functions are a common programming pattern in
+            many languages and frameworks, and they are especially useful in
+            situations where the order of execution is not known ahead of time,
+            or when multiple functions need to be executed in parallel or in
+            sequence.
+          </p>
+          <p>
+            <strong>Reason behind using Callback function:</strong> Callback
+            functions are used to handle situations where a function needs to
+            wait for an operation to complete before it can continue executing.
+            By passing a callback function as an argument to the function, the
+            callback can be called when the operation is complete, allowing the
+            main function to continue executing. Callbacks are also useful for
+            handling user events or input, and are a powerful tool for creating
+            flexible and modular code.
+          </p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

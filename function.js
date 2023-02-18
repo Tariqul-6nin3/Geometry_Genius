@@ -1,8 +1,12 @@
+/*----------------------
+Change to another window
+------------------------ */
+
 document.getElementById("blog-btn").addEventListener("click", function () {
   window.location.href = "./blog.html";
 });
 
-/* -------------
+/*------------------
 Triangle Calculation
   ---------------- */
 document
@@ -89,9 +93,9 @@ document
     }
   });
 
-/* ---------------------------
-         Rhombos Calculation
-  ---------------------------- */
+/* ----------------------
+    Rhombos Calculation
+  ----------------------- */
 
 document
   .getElementById("calculte-btn-4")
@@ -121,7 +125,63 @@ document
     }
   });
 
-// some common utility :
+/* ---------------------------
+    Pentagone Calculation
+  ---------------------------- */
+
+document
+  .getElementById("calculte-btn-5")
+  .addEventListener("click", function () {
+    const pentaPerimeter = innerTextValue("perimeter", true);
+    const pentaApothem = innerTextValue("apothem", true);
+    const nameOfObject = innerTextValue("pentagone");
+    const areaOfPentagone =
+      0.5 * parseFloat(pentaPerimeter) * parseFloat(pentaApothem);
+    if (
+      isNaN(parseFloat(pentaPerimeter), isNaN(parseFloat(pentaApothem))) ===
+      true
+    ) {
+      alert(
+        "Please enter a number.Value of length & height always should be a number"
+      );
+    } else if ((parseFloat(pentaPerimeter), parseFloat(pentaApothem) <= 0)) {
+      alert(
+        "Value of length & height must be more than Zero.PLz add any Number"
+      );
+    } else {
+      const showdata = displayData(nameOfObject, areaOfPentagone);
+    }
+  });
+
+/* ---------------------------
+    Ellipse Calculation
+  ---------------------------- */
+
+document
+  .getElementById("calculte-btn-6")
+  .addEventListener("click", function () {
+    const axisA = innerTextValue("axisA", true);
+    const axisB = innerTextValue("axisB", true);
+    const nameOfObject = innerTextValue("ellipse");
+    const areaOfEllipses = 3.1416 * parseFloat(axisA) * parseFloat(axisB);
+    if (isNaN(parseFloat(axisA), isNaN(parseFloat(axisB))) === true) {
+      alert(
+        "Please enter a number.Value of length & height always should be a number"
+      );
+    } else if ((parseFloat(axisA), parseFloat(axisB) <= 0)) {
+      alert(
+        "Value of length & height must be more than Zero.PLz add any Number"
+      );
+    } else {
+      const showdata = displayData(nameOfObject, areaOfEllipses);
+    }
+  });
+
+/* ---------------------------
+     Some Common Functions
+  ---------------------------- */
+
+// function for innerText & innerValue.
 function innerTextValue(idName, isInput) {
   if (isInput === true) {
     const inputField = document.getElementById(idName);
@@ -133,6 +193,9 @@ function innerTextValue(idName, isInput) {
     return textFieldValue;
   }
 }
+
+// function for creating table data & Append;
+
 let rowCounter = 1; // Counter variable to keep track of dynamic row numbers
 
 function displayData(nameOfObject, areaOfTriangle) {
@@ -149,8 +212,10 @@ function displayData(nameOfObject, areaOfTriangle) {
 
   button.textContent = "Convert to m\u00B2";
   button.style.backgroundColor = "blue";
-  button.style.padding = "8px";
+  button.style.padding = "8px 5px";
   button.style.color = "white";
+  button.style.fontSize = "10px";
+  button.style.borderRadius = "4px";
   td.appendChild(button);
   container.appendChild(tr);
 
