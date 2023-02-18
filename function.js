@@ -65,6 +65,34 @@ document
 /* ---------------------
     Paralle Calculation
   ----------------------- */
+document
+  .getElementById("calculate-btn-2")
+  .addEventListener("click", function () {
+    const widthValueRectangle = innerTextValue("width-field-rect", true);
+    const lengthValueRectangle = innerTextValue("length-field-rect", true);
+    const nameOfObject = innerTextValue("rectangle");
+    const areaOfrectangle =
+      parseFloat(lengthValueRectangle) * parseFloat(widthValueRectangle);
+    // console.log(areaOfrectangle);
+    if (
+      isNaN(
+        parseFloat(widthValueRectangle),
+        isNaN(parseFloat(lengthValueRectangle))
+      ) === true
+    ) {
+      alert(
+        "Please enter a number.Value of length & height always should be a number"
+      );
+    } else if (
+      (parseFloat(widthValueRectangle), parseFloat(lengthValueRectangle) <= 0)
+    ) {
+      alert(
+        "Value of length & height must be more than Zero otherwise it can't be a triangle"
+      );
+    } else {
+      const showdata = displayData(nameOfObject, areaOfrectangle);
+    }
+  });
 
 // some common utility :
 function innerTextValue(idName, isInput) {
@@ -85,10 +113,15 @@ function displayData(nameOfObject, areaOfTriangle) {
     <td>${1}</td>
     <td>${nameOfObject}</td>
     <td>${areaOfTriangle}</td>
-    <td>${1}</td>
-       `;
+    <td></td>
+  `;
+  const td = tr.querySelector("td:last-child");
+  const button = document.createElement("button");
+  button.textContent = "Convert to m\u00B2";
+  td.appendChild(button);
   container.appendChild(tr);
 }
+
 const card = document.querySelectorAll(".single-card");
 
 // Define an array of random colors
