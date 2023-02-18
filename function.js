@@ -225,7 +225,7 @@ function displayData(nameOfObject, areaOfTriangle) {
     // Update the content of the corresponding table cell with the new value
     tr.querySelector(
       "td:nth-child(3)"
-    ).textContent = `${areaOfTriangleMeters} m²`;
+    ).textContent = `${areaOfTriangleMeters} mtr`;
   });
 
   rowCounter++; // Increment the row counter

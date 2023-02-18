@@ -17,12 +17,11 @@
 }
 .main-title {
   font-weight: 700;
-  font-size: 30px;
+
   color: rgba(17, 17, 17, 0.8);
 }
 .second-title {
   font-weight: 500;
-  font-size: 20px;
   color: rgba(17, 17, 17, 0.6);
 }
 .header-button {
@@ -32,14 +31,9 @@
   padding: 9px 38px;
   background-color: rgba(16, 144, 216, 1);
   border-radius: 6px;
-  margin-top: 18px;
-  margin-right: 20px;
 }
 .claculate-btn {
   background-color: #1090d8;
-}
-.area-calculation {
-  /* border: 1px solid gray; */
 }
 .object-photo {
   height: 185px;
